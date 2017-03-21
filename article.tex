@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL article-oldtmp-3228.tex   Tue Mar 21 10:52:21 2017
-%DIF ADD article.tex               Tue Mar 21 10:52:20 2017
+%DIF DEL article-oldtmp-3623.tex   Tue Mar 21 10:58:53 2017
+%DIF ADD article.tex               Tue Mar 21 10:58:52 2017
 
 \usepackage{amsmath, amsthm, amsfonts}
 
@@ -20,11 +20,7 @@
 \setlength{\marginparwidth}{3.25cm}
 
 
-%DIF 20c20
-%DIF < \newcommand{\currentauthor}{Penny} %first name with capital to start.
-%DIF -------
-\newcommand{\currentauthor}{Steve} %first name with capital to start. %DIF > 
-%DIF -------
+\newcommand{\currentauthor}{Penny} %first name with capital to start.
 \include{author_info}   %each author has personalised information
 
 \newdate{rev1}{01}{01}{2017}
@@ -65,7 +61,10 @@
 
 Some standard introductory text. \Penny{\rev{1}}{Example to do note.}
 
-\section{Conclusions}
+\DIFaddbegin \DIFaddPenny{Additional introductory notes from author Penny.
+}
+
+\DIFaddend \section{Conclusions}
 
 Some standard concluding text. \Steve{\rev{2}}{Example with new date}
 
