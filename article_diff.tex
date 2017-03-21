@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL article-oldtmp-3623.tex   Tue Mar 21 10:58:53 2017
-%DIF ADD article.tex               Tue Mar 21 10:58:52 2017
+%DIF DEL article-oldtmp-3971.tex   Tue Mar 21 11:02:47 2017
+%DIF ADD article.tex               Tue Mar 21 11:02:46 2017
 
 \usepackage{amsmath, amsthm, amsfonts}
 
@@ -64,11 +64,10 @@ Some standard introductory text. \Penny{\rev{1}}{Example to do note.}
 \DIFaddbegin \DIFaddPenny{Additional introductory notes from author Penny.
 }
 
-\DIFaddend \section{Conclusions}
+\DIFdelbegin \DIFdelSteve{Some standard concluding text}\DIFdelend \DIFaddbegin \DIFaddSteve{Make a standard summary in the conclusions}\DIFaddend . \Steve{\rev{2}}{Example with new date}
+\DIFaddbegin 
 
-Some standard concluding text. \Steve{\rev{2}}{Example with new date}
+\DIFaddSteve{Some additional changes from author Steve.
+}\DIFaddend 
 
-\DIFaddbegin \DIFaddSteve{Some additional changes from author Steve.
-}
-
- \DIFaddend\end{document}
+\end{document}
