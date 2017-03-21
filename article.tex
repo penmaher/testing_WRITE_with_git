@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsthm, amsfonts}
+
+\title{Example article using latex git track changes}
+
+\author{Penelope Maher, \and Stephen Maher}
+
+\usepackage[margin=4cm]{geometry} %change margin width
+
+\include{color_change}  %this is the file that defines a colour per author
+\usepackage{xcolor} 
+\usepackage{xparse}
+\usepackage[ddmmyy]{datetime}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage{setspace}
+\setlength{\marginparwidth}{3.25cm}
+
+
+\newcommand{\currentauthor}{Penny} %first name with capital to start.
+\include{author_info}   %each author has personalised information
+
+\newdate{rev1}{01}{01}{2017}
+\date{\displaydate{rev1}}
+\newdate{rev2}{09}{02}{2017}
+\date{\displaydate{rev2}}
+
+\newcommand{\rev}[1]{\displaydate{rev#1}}
+
+\date{} %this just removes the date from the maketitle
+
+\begin{document}
+
+\maketitle
+
+\abstract{Small sample abstract text of a journal article}
+
+\section{Introduction}
+
+Some standard introductory text. \Penny{\rev{1}}{Example to do note.}
+
+\section{Conclusions}
+
+Some standard concluding text. \Steve{\rev{2}}{Example with new date}
+
+\end{document}

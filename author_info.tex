@@ -1,0 +1,28 @@
+%Define colours for each author
+%author colours see http://htmlcolorcodes.com/color-chart/
+\newcommand{\colourPenny}{orange}
+\definecolor{navy}{HTML}{000080} 
+\newcommand{\colourSteve}{navy}
+
+\NewDocumentCommand{\newauthor}{mmm}{
+        \expandafter\NewDocumentCommand\csname #1\endcsname{#2}{
+{{\setstretch{0.7}\todo[linecolor=\csname colour#1\endcsname,backgroundcolor=\csname colour#1\endcsname!25,bordercolor=\csname colour#1\endcsname,size=\scriptsize]{\textbf{#1} #3}}}}
+}
+
+\input{author_info_names}
+
+%Assign \colourauthor based on \currentauthor as defined in .tex
+
+%\ifcase\pdfstrcmp{\currentauthor}{Penny}\newcommand{\colourauthor}{\colourPenny}\fi
+%\ifcase\pdfstrcmp{\currentauthor}{Steve}\newcommand{\colourauthor}{\colourSteve}\fi
+
+
+%define each \firstname{}{}
+%\newauthor{Penny}{mm}{\textbf{#1:}~#2}
+%\newauthor{Steve}{mm}{\textbf{#1:}~#2}
+
+
+
+
+
+
