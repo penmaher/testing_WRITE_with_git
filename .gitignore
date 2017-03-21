@@ -5,3 +5,6 @@
 *.log
 *.ps
 track_changes
+changes/*
+*.pdf
+*.texe
