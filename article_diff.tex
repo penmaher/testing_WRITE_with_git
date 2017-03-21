@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL article-oldtmp-3175.tex   Tue Mar 21 10:52:08 2017
+%DIF ADD article.tex               Tue Mar 21 10:52:07 2017
+
+\usepackage{amsmath, amsthm, amsfonts}
+
+\title{Example article using latex git track changes}
+
+\author{Penelope Maher, \and Stephen Maher}
+
+\usepackage[margin=4cm]{geometry} %change margin width
+
+\include{color_change}  %this is the file that defines a colour per author
+\usepackage{xcolor} 
+\usepackage{xparse}
+\usepackage[ddmmyy]{datetime}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage{setspace}
+\setlength{\marginparwidth}{3.25cm}
+
+
+%DIF 20c20
+%DIF < \newcommand{\currentauthor}{Penny} %first name with capital to start.
+%DIF -------
+\newcommand{\currentauthor}{Steve} %first name with capital to start. %DIF > 
+%DIF -------
+\include{author_info}   %each author has personalised information
+
+\newdate{rev1}{01}{01}{2017}
+\date{\displaydate{rev1}}
+\newdate{rev2}{09}{02}{2017}
+\date{\displaydate{rev2}}
+
+\newcommand{\rev}[1]{\displaydate{rev#1}}
+
+\date{} %this just removes the date from the maketitle
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFaddSteve{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdelSteve{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\maketitle
+
+\abstract{Small sample abstract text of a journal article}
+
+\section{Introduction}
+
+Some standard introductory text. \Penny{\rev{1}}{Example to do note.}
+
+\section{Conclusions}
+
+Some standard concluding text. \Steve{\rev{2}}{Example with new date}
+
+\DIFaddbegin \DIFaddSteve{Some additional changes from author Steve.
+}
+
+ \DIFaddend\end{document}
