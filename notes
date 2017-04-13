@@ -1,0 +1,1 @@
+When you have two .tex and they get out of sync. Use meld to manually merge. Do not use git for this.
