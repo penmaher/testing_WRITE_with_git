@@ -1,28 +1,33 @@
-%Define colours for each author
-%author colours see http://htmlcolorcodes.com/color-chart/
-\newcommand{\colourPenny}{orange}
-\definecolor{navy}{HTML}{000080} 
-\newcommand{\colourSteve}{navy}
+%% This file provides the author personalisations for the different authors.
+%% The first half of this file is general for all projects.
+%% The second half is project specific and describes the different authors.
+%% If the author list changes, then update the second half or rerun the script track_changes/set_author_info_color.sh
+%% NOTE: Any changes to the author list requires a change to the user_config.sh
+
+
+% Checking whether "my_author_colors.tex" exists and if so, input it.
+\IfFileExists{my_author_colors.tex}
+{
+  \include{my_author_colors}
+}
+{
+  \include{author_colors}
+}
+
+
 
 \NewDocumentCommand{\newauthor}{mmm}{
         \expandafter\NewDocumentCommand\csname #1\endcsname{#2}{
 {{\setstretch{0.7}\todo[linecolor=\csname colour#1\endcsname,backgroundcolor=\csname colour#1\endcsname!25,bordercolor=\csname colour#1\endcsname,size=\scriptsize]{\textbf{#1} #3}}}}
 }
+%% NOTE: Edit from here for different personalisations. Remember that this file is regenerated each time track_changes/set_author_info_color.sh is run
+% This file is the individual personalisations for the author info.
 
-\input{author_info_names}
 
 %Assign \colourauthor based on \currentauthor as defined in .tex
+\ifcase\pdfstrcmp{\currentauthor}{Penny}\newcommand{\colourauthor}{\colourPenny}\fi
+\newauthor{Penny}{mm}{\textbf{#1:}~#2}
 
-%\ifcase\pdfstrcmp{\currentauthor}{Penny}\newcommand{\colourauthor}{\colourPenny}\fi
-%\ifcase\pdfstrcmp{\currentauthor}{Steve}\newcommand{\colourauthor}{\colourSteve}\fi
-
-
-%define each \firstname{}{}
-%\newauthor{Penny}{mm}{\textbf{#1:}~#2}
-%\newauthor{Steve}{mm}{\textbf{#1:}~#2}
-
-
-
-
-
+\ifcase\pdfstrcmp{\currentauthor}{Steve}\newcommand{\colourauthor}{\colourSteve}\fi
+\newauthor{Steve}{mm}{\textbf{#1:}~#2}
 
