@@ -5,25 +5,17 @@
 
 \usepackage{amsmath, amsthm, amsfonts}
 
-%DIF 5c5
-%DIF < \title{Example article using latex git track changes}
-%DIF -------
-\title{Example article using \emph{WRITE -- with git}} %DIF > 
-%DIF -------
-
+\title{Example article using \emph{WRITE -- with git}}
 \author{Penelope Maher, \and Stephen Maher}
 
 \usepackage[margin=4cm]{geometry} %change margin width
 
-%DIF 11c11-15
-%DIF < \include{color_change}  %this is the file that defines a colour per author
-%DIF -------
-\usepackage{xspace}  %DIF > 
-\newcommand{\latex}{\LaTeX\xspace} %DIF > 
- %DIF > 
-%preamble needed for WRITE - with git %DIF > 
-\include{color_change}   %DIF > 
-%DIF -------
+\usepackage{xspace}
+\newcommand{\latex}{\LaTeX\xspace}
+
+%preamble needed for WRITE - with git
+\include{color_change}  
+
 \usepackage{xcolor} 
 \usepackage{xparse}
 \usepackage[ddmmyy]{datetime}
@@ -33,11 +25,7 @@
 
 
 \newcommand{\currentauthor}{Penny} %first name with capital to start.
-%DIF 21c25
-%DIF < \include{author_info}   %each author has personalised information
-%DIF -------
-\include{author_info}   %DIF > 
-%DIF -------
+\include{author_info}   
 
 \newdate{rev1}{01}{01}{2017}
 \date{\displaydate{rev1}}
@@ -47,44 +35,20 @@
 \newcommand{\rev}[1]{\displaydate{rev#1}}
 
 \date{} %this just removes the date from the maketitle
-%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
-%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
-\RequirePackage[normalem]{ulem} %DIF PREAMBLE
-\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
-\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
-\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
-%DIF SAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
-\providecommand{\DIFaddend}{} %DIF PREAMBLE
-\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
-\providecommand{\DIFdelend}{} %DIF PREAMBLE
-%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
-\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
-\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
-\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
-\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
-%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
-
 \begin{document}
 
 \maketitle
 
-\DIFdelbegin %DIFDELCMD < \abstract{Small sample abstract text of a journal article}
-%DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \abstract{Small example using \emph{WRITE -- with git} to write a journal article.}
-\DIFaddend 
+\abstract{Small example using \emph{WRITE -- with git} to write a journal article.}
 
 \section{Introduction}
 
-\DIFdelbegin \DIFdelPenny{Some standard introductory text}\DIFdelend \DIFaddbegin \DIFaddPenny{Writing a journal article in }\latex \DIFaddPenny{has so many advantages over writing in an office product such as word or libre office. But there are a few things }\latex \DIFaddPenny{is missing. These include personalised track changes, personalised to-do notes and merging documents. So we wrote }\emph{\DIFaddPenny{WRITE -- with git}} \DIFaddPenny{to improve the writing experience in }\latex\DIFaddend . \Penny{\rev{1}}{Example to do note.}
+Writing a journal article in \latex has so many advantages over writing in an office product such as word or libre office. But there are a few things \latex is missing. These include personalised track changes, personalised to-do notes and merging documents. So we wrote \emph{WRITE -- with git} to improve the writing experience in \latex. \Penny{\rev{1}}{Example to do note.}
 
 
 \section{Conclusions}
+\Steve{\rev{2}}{Example with new date}
 
-\DIFdelbegin \DIFdelSteve{Some standard concluding text. }\DIFdelend \Steve{\rev{2}}{Example with new date}
-\DIFaddbegin \DIFaddSteve{Using the package }\emph{\DIFaddSteve{WRITE -- with git}} \DIFaddSteve{you are able to create personalised `to do' notes, that are dated and with a different colour for each author. 
-}\DIFaddend 
+Using the package \emph{WRITE -- with git} you are able to create personalised `to do' notes, that are dated and with a different colour for each author. 
 
 \end{document}
