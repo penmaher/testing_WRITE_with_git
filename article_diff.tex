@@ -1,11 +1,15 @@
 \documentclass[12pt]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL article-oldtmp-5078.tex   Tue Mar 21 11:24:10 2017
-%DIF ADD article.tex               Tue Mar 21 11:24:09 2017
+%DIF DEL article-oldtmp-14706.tex   Mon Apr 17 15:31:01 2017
+%DIF ADD article.tex                Mon Apr 17 15:30:59 2017
 
 \usepackage{amsmath, amsthm, amsfonts}
 
-\title{Example article using latex git track changes}
+%DIF 5c5
+%DIF < \title{Example article using latex git track changes}
+%DIF -------
+\title{Example article using WRITE -- with git} %DIF > 
+%DIF -------
 
 \author{Penelope Maher, \and Stephen Maher}
 
@@ -67,10 +71,8 @@ Some standard introductory text. \Penny{\rev{1}}{Example to do note.}
 
 \section{Conclusions}
 
-\DIFdelbegin \DIFdelSteve{Some standard concluding text}\DIFdelend \DIFaddbegin \DIFaddSteve{Make a standard summary in the conclusions}\DIFaddend . \Steve{\rev{2}}{Example with new date}
-\DIFaddbegin 
-
-\DIFaddSteve{Some additional changes from author Steve.
+\DIFdelbegin \DIFdelSteve{Some standard concluding text. }\DIFdelend \Steve{\rev{2}}{Example with new date}
+\DIFaddbegin \DIFaddSteve{Using the package }\emph{\DIFaddSteve{WRITE -- with git}} \DIFaddSteve{you are able to create personalised `to do' notes, that are dated and with a different colour for each author. 
 }\DIFaddend 
 
 \end{document}
