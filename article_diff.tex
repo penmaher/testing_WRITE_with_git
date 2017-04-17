@@ -59,8 +59,8 @@
 \providecommand{\DIFdelbegin}{} %DIF PREAMBLE
 \providecommand{\DIFdelend}{} %DIF PREAMBLE
 %DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
-\providecommand{\DIFaddFL}[1]{\DIFaddPenny{#1}} %DIF PREAMBLE
-\providecommand{\DIFdelFL}[1]{\DIFdelPenny{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
 \providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
 \providecommand{\DIFaddendFL}{} %DIF PREAMBLE
 \providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
@@ -83,6 +83,8 @@
 
 \section{Conclusions}
 
-Some standard concluding text. \Steve{\rev{2}}{Example with new date}
+\DIFdelbegin \DIFdelSteve{Some standard concluding text. }\DIFdelend \Steve{\rev{2}}{Example with new date}
+\DIFaddbegin \DIFaddSteve{Using the package }\emph{\DIFaddSteve{WRITE -- with git}} \DIFaddSteve{you are able to create personalised `to do' notes, that are dated and with a different colour for each author. 
+}\DIFaddend 
 
 \end{document}
