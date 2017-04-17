@@ -10,9 +10,10 @@ branch_prefix='test_'
 
 #----Read me for user_config.sh -----
 
-#$git_path is the path to where you're writing the article or in this case testing. The $username_exe is an environment variable that is in the .bashrc file (if working on linux)
+#In the .bashrc (or equivalent) set up the environment variable called $user_path 
+#$git_path is the path to where you're writing the article or in this case testing. 
 #$editing_path is a folder within the $git_path directory that is used to merge changes from each of the authors.
-#$tex_name this is the name of the file that you're writing. In this case its article.tex
-#$author_list is all the authors on the project, in this case two, each of which has a branch they work from
-#Withing the test_latex_git_track_changes repo there are two author branches called test_penny and test_steve. The $branch_prefix is setting the syntax for these branches.
+#$tex_name this is the name of the file that you're writing. In this case it's article.tex
+#$author_list is all the authors on the project, in this case two, each of which has a branch they work from.
+#Within the test_latex_git_track_changes repo there are two author branches called test_penny and test_steve. The $branch_prefix is setting the syntax for these branches.
 
