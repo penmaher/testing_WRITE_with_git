@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL article-oldtmp-22076.tex   Mon Apr 17 16:31:15 2017
-%DIF ADD article.tex                Mon Apr 17 16:31:13 2017
+%DIF DEL article-oldtmp-22137.tex   Mon Apr 17 16:31:26 2017
+%DIF ADD article.tex                Mon Apr 17 16:31:24 2017
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL article-oldtmp-16771.tex   Mon Apr 17 15:47:52 2017
 %DIF ADD article.tex                Mon Apr 17 15:47:50 2017
@@ -66,7 +66,11 @@
 
 \section{Introduction}
 
-Writing a journal article in \latex has so many advantages over writing in an office product such as word or libre office. But there are a few things \latex is missing. These include personalised track changes, personalised to-do notes and merging documents. So we wrote \emph{WRITE -- with git} to improve the writing experience in \latex. \Penny{\rev{1}}{Example to do note.}
+Writing a journal article in \latex has so many advantages over writing in an office product such as \DIFdelbegin \DIFdelPenny{word or libre office}\DIFdelend \DIFaddbegin \DIFaddPenny{MS Word or libreoffice}\DIFaddend . But there are a few things \latex is missing. These include personalised track changes, personalised to-do notes and \DIFdelbegin \DIFdelPenny{merging }\DIFdelend \DIFaddbegin \DIFaddPenny{the ability to easily merge }\DIFaddend documents. So we wrote \emph{WRITE -- with git} to improve the writing experience in \latex. \Penny{\rev{1}}{Example to do note.}
+\DIFaddbegin 
+
+\DIFaddPenny{The software that we have writted is a collection of shell scripts that utilise the diff managing ability of git. It simply compares all revisions of a document and produces a diff file that can be edited.
+}\DIFaddend 
 
 
 \section{Conclusions}
