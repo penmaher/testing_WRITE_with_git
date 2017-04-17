@@ -8,4 +8,9 @@ track_changes
 changes/*
 *.pdf
 *.texe
+author_colors.tex
+author_info.tex
+color_change.tex
+my_author_colors.tex
+
 
